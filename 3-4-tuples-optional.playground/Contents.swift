@@ -96,7 +96,7 @@ print("Мои параметры:\(myParameters)\nЕё параметры:\(herP
 //Optional types
 
 var apples :Int? = 5
-//apples = nil
+apples = nil
 
 if apples == nil{
     print(apples)
@@ -119,5 +119,50 @@ if let ageNumber = Int(age) {
 // ДЗ. 1. Создать 5 констант, строковые константы, какие-то из цифр, какие-то цифры - буквы. Нужно найти сумму всех констант приведя их к Int.
 // 2. Мы получаем какой-то тюпл с серверного запроса, он может придти с тремя параметрами: 1 статус код(Int), 2 Message (Строка опциональная), 3 ErrorMessage(строка опциональная). Если статус код находится в диапазоне от 200-300 исключительно - показать Massage, если вне диапазона - ErrorMassage.
 
-// new comment
-let gg = 10
+// Homework Optional
+// Part 1
+let k1 = "1"
+let k2 = "2f"
+let k3 = "3"
+let k4 = "4f"
+let k5 = "5"
+var resultK:Int = 0
+
+if Int(k1) != nil {
+    resultK += Int(k1)!
+    print("Result on 1 step:\(resultK)")
+}
+if Int(k2) != nil {
+    resultK += Int(k2)!
+    print("Result on 2 step:\(resultK)")
+}
+if Int(k3) != nil {
+    resultK += Int(k3)!
+    print("Result on 3 step:\(resultK)")
+}
+if Int(k4) != nil {
+    resultK += Int(k4)!
+    print("Result on 4 step:\(resultK)")
+}
+if Int(k5) != nil {
+    resultK += Int(k5)!
+    print("Result on 5 step:\(resultK)")
+}
+
+// Part 2
+
+let serverStatus : (Int?, String?, String?) = (Statuscode:200, Message:"Server is OK", ErrorMessage:"Error!!!")
+
+if serverStatus.0 != nil{
+    print("---------------------")
+    print("All work")
+    if (serverStatus.0! >= 200) && (serverStatus.0! <= 300){
+        print("Message: \(serverStatus.1!)")
+    } else {
+        print("Message: \(serverStatus.2!)")
+    }
+} else {
+    print("Can't check server status")
+}
+
+
