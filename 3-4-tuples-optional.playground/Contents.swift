@@ -150,32 +150,65 @@ if Int(k5) != nil {
     print("Result on 5 step:\(resultK)")
 }
 
-// Part 2
+// Part 2.1
 
-let serverStatus : (Int?, String?, String?) = (Statuscode:200, Message:"Server is OK", ErrorMessage:"Error!!!")
+let serverStatus : (Statuscode:Int?, Message:String?, ErrorMessage:String?) = (200, "Server is OK", "Error!!!")
 
-if serverStatus.0 != nil{
+if serverStatus.Statuscode != nil{
     print("---------------------")
-    print("All work")
-    if (serverStatus.0! >= 200) && (serverStatus.0! <= 300){
-        print("Message: \(serverStatus.1!)")
+    print("First server response:")
+    if (serverStatus.Statuscode! >= 200) && (serverStatus.Statuscode! < 300){
+        print("Message: \(serverStatus.Message!)")
     } else {
-        print("Message: \(serverStatus.2!)")
+        print("Message: \(serverStatus.ErrorMessage!)")
     }
 } else {
     print("Can't check server status")
 }
 
+// Part 2.2
+
 print("---------------------")
 print("Second server response:")
-let serverStatus2 : (String?, String?) = (Message:"Server is OK", ErrorMessage:"Error!!!")
-if serverStatus2.0 != nil {
-    print(serverStatus2.0!)
+let serverStatus2 : (Message:String?, ErrorMessage:String?) = ("Server is OK", "Error!!!")
+if serverStatus2.Message != nil {
+    print("Message: \(serverStatus2.Message!)")
 } else {
-    print(serverStatus2.1!)
+    print("Message: \(serverStatus2.ErrorMessage!)")
 }
 print("---------------------")
+
 // Part 3
+
+var student1 : (name:String, carNumber:String?, mark:Int?)
+var student2 : (name:String, carNumber:String?, mark:Int?)
+var student3 : (name:String, carNumber:String?, mark:Int?)
+var student4 : (name:String, carNumber:String?, mark:Int?)
+var student5 : (name:String, carNumber:String?, mark:Int?)
+
+student1.name = "Bob"
+student1.carNumber = "5453-01"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
