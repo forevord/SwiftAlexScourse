@@ -174,7 +174,6 @@ let abcArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
 
 for (index, value) in abcArray.enumerated() {
     for j in 1...abcArray.count {
-//        print("\(i) \(j)")
         if (index % 2 == 1) && (j % 2 == 1) || (index % 2 == 0) && (j % 2 == 0) {
             let param = value + String(j)
             chessDescDict.updateValue(true, forKey: param)
@@ -189,6 +188,6 @@ print(chessDescDict)
 
 chessDescDict["A1"]
 chessDescDict["A2"]
-
-
+chessDescDict["B1"]
+chessDescDict["B2"]
 
