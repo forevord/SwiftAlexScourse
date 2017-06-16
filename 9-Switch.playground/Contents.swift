@@ -216,13 +216,20 @@ var treTrubnik2     = (1,0,1)
 var chetyreTrubnik  = (1,0,0,1)
 
 switch fire {
+
+//Однотрубник 1
     case ("Ж", 2): print("Убил однотрубник 1"); odnoTrubnik.0+=1
+    
+//Однотрубник 2
     case ("И", 6): print("Убил однотрубник 2"); odnoTrubnik.1+=1
+    
+//Однотрубник 3
     case ("А", 6): print("Убил однотрубник 3"); odnoTrubnik.2+=1
+    
+//Однотрубник 4
     case ("Г", 8): print("Убил однотрубник 4"); odnoTrubnik.3+=1
 
 //Двухтрубник 1
-    
     case ("Ж", 5) where dvuTrubnik1.1<=0:
         print("Ранил двутрубник 1") ; dvuTrubnik1.0+=1
     case ("Ж", 5) where dvuTrubnik1.1>0:
@@ -233,7 +240,6 @@ switch fire {
         print("Убил двутрубник 1")  ; dvuTrubnik1.1+=1
 
 //Двухтрубник 2
-    
     case ("Б", 8) where dvuTrubnik2.1<=0:
         print("Ранил двутрубник 2") ; dvuTrubnik2.0+=1
     case ("Б", 8) where dvuTrubnik2.1>0:
@@ -244,7 +250,6 @@ switch fire {
         print("Убит двутрубник 2")  ; dvuTrubnik2.1+=1
 
 //Двухтрубник 3
-    
     case ("И", 3) where dvuTrubnik3.1<=0:
         print("Ранил двутрубник 3") ; dvuTrubnik3.0+=1
     case ("И", 3) where dvuTrubnik3.1>0:
@@ -255,7 +260,6 @@ switch fire {
         print("Убит двутрубник 3")  ; dvuTrubnik3.1+=1
     
 //Трехтрубние 1
-    
     case ("И", 9) where treTrubnik1.1<=0    ||  treTrubnik1.2<=0:
         print("Ранил трехтрубник 1"); treTrubnik1.0+=1
     case ("И", 9) where treTrubnik1.1>0     &&  treTrubnik1.2>0:
@@ -278,7 +282,6 @@ switch fire {
         print("Ранил трехтрубник 1"); treTrubnik1.2+=1
     
 //Трехтрубник 2
-    
     case ("Г", 2) where treTrubnik2.1<=0    ||  treTrubnik2.2<=0:
         print("Ранил трехтрубник 2"); treTrubnik2.0+=1
     case ("Г", 2) where treTrubnik2.1>0     &&  treTrubnik2.2>0:
@@ -301,7 +304,6 @@ switch fire {
         print("Ранил трехтрубник 2"); treTrubnik2.2+=1
     
 //Четырёхтрубник
-    
 case ("Б", 2) where chetyreTrubnik.1<=0||chetyreTrubnik.2<=0 || chetyreTrubnik.3<=0:
     print("Ранил четырехтрубник"); chetyreTrubnik.0+=1
 case ("Б", 2) where chetyreTrubnik.1>0 && chetyreTrubnik.2>0 && chetyreTrubnik.3>0:
