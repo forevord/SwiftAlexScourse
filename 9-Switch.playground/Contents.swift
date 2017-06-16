@@ -259,7 +259,7 @@ switch fire {
     case ("И", 4) where dvuTrubnik3.0>0:
         print("Убит двутрубник 3")  ; dvuTrubnik3.1+=1
     
-//Трехтрубние 1
+//Трехтрубник 1
     case ("И", 9) where treTrubnik1.1<=0    ||  treTrubnik1.2<=0:
         print("Ранил трехтрубник 1"); treTrubnik1.0+=1
     case ("И", 9) where treTrubnik1.1>0     &&  treTrubnik1.2>0:
